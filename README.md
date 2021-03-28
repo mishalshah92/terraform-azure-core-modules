@@ -2,7 +2,7 @@
 
 A bunch of Azure modules to deploy Azure infrastructure.
 
-- **Terraform version** >= `0.14.6`
+- **Terraform version** >= `0.14`
 
 ## Modules
 
