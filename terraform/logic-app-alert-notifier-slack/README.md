@@ -7,7 +7,7 @@ Terraform modules create Logic App for pushing Azure alerts to Slack channel.
 ```hcl-terraform
 
 module "logic_app_alert_notifier_slack" {
-  source = "git@github.com/mishah92/terraform-azure-modules.git//terraform/logic-app-alert-notifier-slack"
+  source = "git::https://github.com/mishah92/terraform-azure-modules.git//terraform/logic-app-alert-notifier-slack"
 
   name     = "my-vnet-peering"
   location = "eastus"

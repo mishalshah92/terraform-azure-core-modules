@@ -7,7 +7,7 @@ Terraform modules create redis cache in Azure.
 ```hcl-terraform
 
 module "redis_cache" {
-  source = "git@github.com/mishah92/terraform-azure-modules.git//terraform/cache-redis"
+  source = "git::https://github.com/mishah92/terraform-azure-modules.git//terraform/cache-redis"
 
   name          = "containerRegistry1"
   location      = "centralindia"

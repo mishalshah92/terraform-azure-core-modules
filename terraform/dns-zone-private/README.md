@@ -7,7 +7,7 @@ Terraform modules create Private DNS zone in Azure.
 ```hcl-terraform
 
 module "private_dns_zone" {
-  source = "git@github.com/mishah92/terraform-azure-modules.git//terraform/dns-zone-private"
+  source = "git::https://github.com/mishah92/terraform-azure-modules.git//terraform/dns-zone-private"
 
   name     = "azure.abc.com"
   # Tags

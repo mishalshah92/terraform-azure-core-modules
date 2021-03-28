@@ -7,7 +7,7 @@ Terraform modules deploys Linux Virtual Machine ScaleSet.
 ```hcl-terraform
 
 module "linux-virtual-machine-scaleset" {
-  source = "git@github.com/mishah92/terraform-azure-modules.git//terraform/linux-virtual-machine-scaleset"
+  source = "git::https://github.com/mishah92/terraform-azure-modules.git//terraform/linux-virtual-machine-scaleset"
 
   name     = "dynamic-demand"
   location = "eastus"
