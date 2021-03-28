@@ -1,6 +1,6 @@
 # Releases
 
-`0.1` pull-request: [#1](https://github.com/mishah92/terraform-azure-modules/pull-requests/1)
+`0.1` pull-request: [#1](https://github.com/mishah92/terraform-azure-modules/pull/1)
 
 - Adding below modules
     - [aks](terraform/aks)
