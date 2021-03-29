@@ -1,0 +1,36 @@
+# Azure Route Table
+
+Terraform modules create Route Table in Azure.
+
+## Development
+
+```hcl-terraform
+
+module "route-table" {
+  source = "git::https://github.com/mishah92/terraform-azure-modules.git//src/route-table"
+
+  name                = "my-route-table"
+  
+  routes = [
+    {
+      name           = "route1"
+      address_prefix = "10.1.0.0/16"
+      next_hop_type  = "vnetlocal"
+    }
+  ]
+
+  # Tags
+  customer       = "customer"
+  env            = "learn"
+  owner          = "customer"
+  email          = "test@customer.com"
+  repo           = "https://github.com/mishah92/terraform-azure-modules"
+  resource_group = "my-resourcegroup"
+  deployment     = "default"
+  module         = "test"
+}
+
+```
+ 
+- **Variables**: For info on variables, check [file](variables.tf)
+- **Outputs**: For info on outputs, check [file](outputs.tf)
