@@ -1,6 +1,6 @@
-# Terraform Azure Modules
+# Terraform Azure Base Modules
 
-A bunch of Azure modules to deploy Azure infrastructure.
+A bunch of Azure modules to deploy Azure infrastructure those have no dependency on other terraform modules.
 
 - **Terraform version** >= `0.14`
 
