@@ -76,7 +76,9 @@ variable "location" {
   type = string
 }
 
-# tagsvariable "tags" {
+# tags
+
+variable "tags" {
   type    = map(string)
   default = {}
 }
