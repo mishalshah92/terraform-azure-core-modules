@@ -38,6 +38,9 @@ A bunch of Azure modules to deploy Azure infrastructure have no dependency on ot
 - [virtual-network-gateway](src/virtual-network-gateway)
 - [virtual-network-peering](src/virtual-network-peering)
   
+## Development
+
+- To manage the Terraform version, [tfenv](https://github.com/tfutils/tfenv) is being used.  
 
 ## Overview
 
