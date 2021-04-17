@@ -22,7 +22,7 @@ resource "azurerm_virtual_network" "vnet" {
     }
   }
 
-  tags = local.tags
+  tags = var.tags
 }
 
 resource "azurerm_network_ddos_protection_plan" "vnet-ddos-plan" {

@@ -1,4 +1,4 @@
-# Azure Database Server - PostgreSQL
+# Database - PostgreSQL
 
 Terraform modules create Azure database for PostgreSQL.
 
@@ -7,7 +7,7 @@ Terraform modules create Azure database for PostgreSQL.
 ```hcl-terraform
 
 module "postgresql-db" {
-  source = "git::https://github.com/mishah92/terraform-azure-modules.git//src/database-server-postgresql"
+  source = "git::https://github.com/cloudops92/terraform-azure-base-modules.git//src/database-postgresql"
 
   name     = "my-postgresql-db"
   location = "centralindia"
@@ -39,15 +39,16 @@ module "postgresql-db" {
     enabled = false
   }
   
-  # Tags
-  customer       = "customer"
-  env            = "learn"
-  owner          = "customer"
-  email          = "test@customer.com"
-  repo           = "https://github.com/mishah92/terraform-azure-modules"
-  resource_group = "my-resourcegroup"
-  deployment     = "default"
-  module         = "test"
+  resource_group  = "my-resourcegroup"
+  location        = "centralindia"
+
+  # tags
+  tags = {
+    env            = "learn"
+    owner          = "customer"
+    email          = "test@example.com"
+    deployment     = "default"
+  }
 }
 
 ```

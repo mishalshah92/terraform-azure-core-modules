@@ -24,15 +24,15 @@ variable "acr_login" {
 
 variable "login_server" {
   type    = string
-  default = "no_url"
+  default = null
 }
 
 variable "username" {
   type    = string
-  default = "no_username"
+  default = null
 }
 
 variable "password" {
   type    = string
-  default = "no_password"
+  default = null
 }

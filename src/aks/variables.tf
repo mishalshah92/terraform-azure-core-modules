@@ -5,11 +5,6 @@ variable "name" {
   type        = string
 }
 
-variable "location" {
-  description = "Location of the Kubernetes cluster"
-  type        = string
-}
-
 variable "default_node_pool" {
   description = "Default node pool configuration as defined on module help"
   type        = list(any)
@@ -121,44 +116,19 @@ variable "addon_profile" {
   default     = []
 }
 
-# tags
-variable "customer" {
-  type = string
-}
-
-variable "env" {
-  type = string
-}
-
-variable "owner" {
-  type = string
-}
-
-variable "email" {
-  type = string
-}
-
-variable "repo" {
-  type = string
-}
-
-variable "deployment" {
-  type = string
-}
-
-variable "module" {
-  type = string
-}
+# Default
 
 variable "resource_group" {
-  type = string
+  description = "Resource Group of the Cluster."
+  type        = string
 }
 
-variable "tool" {
-  description = "Automation tool info"
-  default     = "Managed by Terraform"
+variable "location" {
+  description = "Location of the Kubernetes cluster"
+  type        = string
 }
 
+# tags
 variable "tags" {
   type    = map(string)
   default = {}

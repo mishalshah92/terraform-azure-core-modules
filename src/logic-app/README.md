@@ -1,4 +1,4 @@
-# Azure Logic App
+# Logic App
 
 Terraform modules create Logic App.
 
@@ -7,20 +7,21 @@ Terraform modules create Logic App.
 ```hcl-terraform
 
 module "logic_app" {
-  source = "git::https://github.com/mishah92/terraform-azure-modules.git//src/logic_app"
+  source = "git::https://github.com/cloudops92/terraform-azure-base-modules.git//src/logic_app"
 
   name     = "my-vnet-peering"
   location = "eastus"
   
-  # Tags
-  customer       = "customer"
-  env            = "learn"
-  owner          = "customer"
-  email          = "test@customer.com"
-  repo           = "https://github.com/mishah92/terraform-azure-modules"
-  resource_group = "my-resourcegroup"
-  deployment     = "default"
-  module         = "test"
+  resource_group  = "my-resourcegroup"
+  location        = "centralindia"
+
+  # tags
+  tags = {
+    env            = "learn"
+    owner          = "customer"
+    email          = "test@example.com"
+    deployment     = "default"
+  }
 }
 
 ```

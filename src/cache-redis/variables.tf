@@ -2,11 +2,6 @@ variable "name" {
   type = string
 }
 
-variable "location" {
-  type = string
-}
-
-
 # Config
 
 variable "sku_name" {
@@ -71,46 +66,17 @@ variable "enable_non_ssl_port" {
   default = false
 }
 
-
-# tags
-variable "customer" {
-  type = string
-}
-
-variable "env" {
-  type = string
-}
-
-variable "owner" {
-  type = string
-}
-
-variable "email" {
-  type = string
-}
-
-variable "repo" {
-  type = string
-}
-
-variable "deployment" {
-  type = string
-}
-
-variable "module" {
-  type = string
-}
+# Default
 
 variable "resource_group" {
   type = string
 }
 
-variable "tool" {
-  description = "Automation tool info"
-  default     = "Managed by Terraform"
+variable "location" {
+  type = string
 }
 
-variable "tags" {
+# tagsvariable "tags" {
   type    = map(string)
   default = {}
 }

@@ -1,17 +1,20 @@
-# Application Gateway
+# Linux Virtual Machine ScaleSet
 
-Terraform modules to create Application Gateway in Azure.
+Terraform modules deploys Linux Virtual Machine ScaleSet.
 
 ## Development
 
 ```hcl-terraform
 
-module "application_gateway" {
-  source = "git::https://github.com/cloudops92/terraform-azure-base-modules.git//src/application-gateway"
+module "linux-virtual-machine-scaleset" {
+  source = "git::https://github.com/cloudops92/terraform-azure-base-modules.git//src/linux-virtual-machine-scaleset"
 
-  name = "containerRegistry1"
-  ...
+  name     = "dynamic-demand"
+  location = "eastus"
 
+  # OS
+  source_image_id = "my-vm-iamge-id"
+  
   resource_group  = "my-resourcegroup"
   location        = "centralindia"
 

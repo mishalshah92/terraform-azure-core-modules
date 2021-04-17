@@ -2,7 +2,7 @@
 
 A bunch of Azure modules to deploy Azure infrastructure have no dependency on other terraform modules.
 
-- **Terraform version** >= `0.14`
+- **Terraform version** >= `0.15`
 
 ## Modules
 
@@ -10,19 +10,17 @@ A bunch of Azure modules to deploy Azure infrastructure have no dependency on ot
 - [aks-nodepool](src/aks-nodepool)  
 - [app-service-plan](src/app-service-plan)
 - [application-gateway](src/application-gateway)
-- [application-insights](src/application-insights)  
+- [application-insight](src/application-insight)  
 - [cache-redis](src/cache-redis)
 - [cloud-init-microservice](src/cloud-init-microservice)
 - [container-registry](src/container-registry)
 - [cosmosdb-account](src/cosmosdb-account)  
-- [database-server-postgresql](src/database-server-postgresql)
+- [database-postgresql](src/database-postgresql)
 - [dns-zone-private](src/dns-zone-private)
 - [dns-zone-public](src/dns-zone-public)
 - [function-app](src/function-app)  
 - [key-vault](src/key-vault)  
 - [key-vault-cert-generate](src/key-vault-cert-generate)  
-- [linux-virtual-machine](src/linux-virtual-machine)
-- [linux-virtual-machine-scaleset](src/linux-virtual-machine-scaleset)
 - [logic-app](src/logic-app)
 - [logic-app-alert-notifier-slack](src/logic-app-alert-notifier-slack)  
 - [monitor-autoscale-setting](src/monitor-autoscale-setting)
@@ -34,7 +32,8 @@ A bunch of Azure modules to deploy Azure infrastructure have no dependency on ot
 - [route-table](src/route-table)
 - [storage-account](src/storage-account)
 - [subnet](src/subnet)
-- [subnet-rt-nsg](src/subnet-rt-nsg)  
+- [virtual-machine-linux](src/virtual-machine-linux)
+- [virtual-machine-scaleset-linux](src/virtual-machine-scaleset-linux)
 - [virtual-network](src/virtual-network)
 - [virtual-network-gateway](src/virtual-network-gateway)
 - [virtual-network-peering](src/virtual-network-peering)

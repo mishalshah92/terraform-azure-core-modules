@@ -2,41 +2,9 @@ variable "name" {
   type = string
 }
 
+# Default
+
 variable "location" {
-  type = string
-}
-
-variable "nsg_rules" {
-  type    = map(any)
-  default = {}
-}
-
-# tags
-variable "customer" {
-  type = string
-}
-
-variable "env" {
-  type = string
-}
-
-variable "owner" {
-  type = string
-}
-
-variable "email" {
-  type = string
-}
-
-variable "repo" {
-  type = string
-}
-
-variable "deployment" {
-  type = string
-}
-
-variable "module" {
   type = string
 }
 
@@ -44,10 +12,7 @@ variable "resource_group" {
   type = string
 }
 
-variable "tool" {
-  description = "Automation tool info"
-  default     = "Managed by Terraform"
-}
+# tags
 
 variable "tags" {
   type    = map(string)

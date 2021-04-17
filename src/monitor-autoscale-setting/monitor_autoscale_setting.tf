@@ -94,5 +94,5 @@ resource "azurerm_monitor_autoscale_setting" "autoscale_setting" {
 
   }
 
-  tags = local.tags
+  tags = var.tags
 }

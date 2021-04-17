@@ -47,7 +47,7 @@ resource "azurerm_key_vault_certificate" "key_vault_certificate" {
     }
   }
 
-  tags = local.tags
+  tags = var.tags
 
   lifecycle {
     create_before_destroy = false

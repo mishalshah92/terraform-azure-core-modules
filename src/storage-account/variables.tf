@@ -1,7 +1,3 @@
-variable "location" {
-  type = string
-}
-
 variable "name" {
   type = string
 }
@@ -71,33 +67,9 @@ variable "static_website" {
   default = null
 }
 
-# Tags
+# Default
 
-variable "customer" {
-  type = string
-}
-
-variable "owner" {
-  type = string
-}
-
-variable "email" {
-  type = string
-}
-
-variable "env" {
-  type = string
-}
-
-variable "repo" {
-  type = string
-}
-
-variable "deployment" {
-  type = string
-}
-
-variable "module" {
+variable "location" {
   type = string
 }
 
@@ -105,10 +77,7 @@ variable "resource_group" {
   type = string
 }
 
-variable "tool" {
-  description = "Automation tool info"
-  default     = "Managed by Terraform"
-}
+# tags
 
 variable "tags" {
   type    = map(string)

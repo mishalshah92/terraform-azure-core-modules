@@ -43,5 +43,5 @@ resource "azurerm_redis_cache" "redis" {
     }
   }
 
-  tags = local.tags
+  tags = var.tags
 }

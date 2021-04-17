@@ -13,5 +13,5 @@ resource "azurerm_route_table" "rt" {
     }
   }
 
-  tags = local.tags
+  tags = var.tags
 }

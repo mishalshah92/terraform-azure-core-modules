@@ -16,7 +16,7 @@ resource "azurerm_network_interface" "linux_machine_nat_interface" {
     primary                       = var.primary_ip_config
   }
 
-  tags = local.tags
+  tags = var.tags
 }
 
 
@@ -97,7 +97,7 @@ resource "azurerm_linux_virtual_machine" "linux_machine" {
   }
 
   # Others
-  tags = local.tags
+  tags = var.tags
 }
 
 
@@ -113,5 +113,5 @@ resource "azurerm_dev_test_global_vm_shutdown_schedule" "auto_shutdown" {
     enabled = false
   }
 
-  tags = local.tags
+  tags = var.tags
 }

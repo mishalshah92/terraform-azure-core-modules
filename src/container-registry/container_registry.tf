@@ -40,5 +40,5 @@ resource "azurerm_container_registry" "acr" {
     enabled = var.trust_policy
   }
 
-  tags = local.tags
+  tags = var.tags
 }

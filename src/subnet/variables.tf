@@ -25,7 +25,7 @@ variable "enforce_private_link_service_network_policies" {
   default = false
 }
 
-# tags
+# Default
 
 variable "resource_group" {
   type = string

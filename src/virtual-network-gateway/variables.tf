@@ -2,10 +2,6 @@ variable "name" {
   type = string
 }
 
-variable "location" {
-  type = string
-}
-
 # virtual-network-gateway
 
 variable "vpn_type" {
@@ -72,32 +68,9 @@ variable "ip_idle_timeout_in_minutes" {
   default = 4
 }
 
-# tags
-variable "customer" {
-  type = string
-}
+# Default
 
-variable "env" {
-  type = string
-}
-
-variable "owner" {
-  type = string
-}
-
-variable "email" {
-  type = string
-}
-
-variable "repo" {
-  type = string
-}
-
-variable "deployment" {
-  type = string
-}
-
-variable "module" {
+variable "location" {
   type = string
 }
 
@@ -105,10 +78,7 @@ variable "resource_group" {
   type = string
 }
 
-variable "tool" {
-  description = "Automation tool info"
-  default     = "Managed by Terraform"
-}
+# tags
 
 variable "tags" {
   type    = map(string)

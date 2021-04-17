@@ -13,9 +13,9 @@ resource "azurerm_dns_zone" "public_dns_zone" {
       retry_time    = lookup(soa_record.value, "retry_time", null)
       serial_number = lookup(soa_record.value, "serial_number", null)
       ttl           = lookup(soa_record.value, "ttl", null)
-      tags          = local.tags
+      tags          = var.tags
     }
   }
 
-  tags = local.tags
+  tags = var.tags
 }

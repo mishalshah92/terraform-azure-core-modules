@@ -170,7 +170,7 @@ resource "azurerm_linux_virtual_machine_scale_set" "vm_scale_set_template" {
     ultra_ssd_enabled = var.ultra_ssd_enabled
   }
 
-  tags = local.tags
+  tags = var.tags
 
   lifecycle {
     ignore_changes = [

@@ -2,10 +2,6 @@ variable "name" {
   type = string
 }
 
-variable "location" {
-  type = string
-}
-
 variable "sku" {
   type    = string
   default = "Standard"
@@ -38,33 +34,9 @@ variable "trust_policy" {
   default = false
 }
 
+# Default
 
-# tags
-variable "customer" {
-  type = string
-}
-
-variable "env" {
-  type = string
-}
-
-variable "owner" {
-  type = string
-}
-
-variable "email" {
-  type = string
-}
-
-variable "repo" {
-  type = string
-}
-
-variable "deployment" {
-  type = string
-}
-
-variable "module" {
+variable "location" {
   type = string
 }
 
@@ -72,11 +44,7 @@ variable "resource_group" {
   type = string
 }
 
-variable "tool" {
-  description = "Automation tool info"
-  default     = "Managed by Terraform"
-}
-
+# tags
 variable "tags" {
   type    = map(string)
   default = {}

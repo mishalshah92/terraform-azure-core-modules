@@ -292,5 +292,5 @@ resource "azurerm_application_gateway" "app_gateway" {
     }
   }
 
-  tags = local.tags
+  tags = var.tags
 }

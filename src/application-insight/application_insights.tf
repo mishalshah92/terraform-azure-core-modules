@@ -11,5 +11,5 @@ resource "azurerm_application_insights" "app_insights" {
   sampling_percentage = var.sampling_percentage
   disable_ip_masking  = var.disable_ip_masking
 
-  tags = local.tags
+  tags = var.tags
 }

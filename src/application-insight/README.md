@@ -1,17 +1,17 @@
-# Application Gateway
+# Application Insight
 
-Terraform modules to create Application Gateway in Azure.
+Terraform modules create Application Insight in Azure.
 
 ## Development
 
 ```hcl-terraform
 
-module "application_gateway" {
-  source = "git::https://github.com/cloudops92/terraform-azure-base-modules.git//src/application-gateway"
+module "application_insight" {
+  source = "git::https://github.com/cloudops92/terraform-azure-base-modules.git//src/application-insight"
 
-  name = "containerRegistry1"
-  ...
-
+  name              = "azure.abc.com"
+  application_type  = "web"
+  
   resource_group  = "my-resourcegroup"
   location        = "centralindia"
 

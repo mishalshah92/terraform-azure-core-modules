@@ -1,4 +1,4 @@
-# Azure AKS Node Pool
+# AKS (Azure Kubernetes Service) Node Pool
 
 Terraform module to create node pool for Kubernetes Cluster in Azure with AKS service.
 
@@ -7,21 +7,21 @@ Terraform module to create node pool for Kubernetes Cluster in Azure with AKS se
 ```hcl-terraform
 
 module "aks_nodepool" {
-  source = "git@https://github.com/mishah92/terraform-azure-modules.git//src/aks-nodepool"
+  source = "git@https://github.com/cloudops92/terraform-azure-base-modules.git//src/aks-nodepool"
 
   name                  = "containerRegistry1"
   kubernetes_cluster_id = "cluster/id"
   vm_size               = "Standard_BSv3"
 
-  # Tags
-  customer       = "customer"
-  env            = "learn"
-  owner          = "customer"
-  email          = "test@customer.com"
-  repo           = "https://github.com/mishah92/terraform-azure-modules"
   resource_group = "my-resourcegroup"
-  deployment     = "default"
-  module         = "test"
+
+  # tags
+  tags = {
+    env            = "learn"
+    owner          = "customer"
+    email          = "test@example.com"
+    deployment     = "default"
+  }
 }
 
 ```

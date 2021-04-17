@@ -1,4 +1,4 @@
-# Azure Linux Virtual Machine
+# Virtual Machine - Linux
 
 Terraform modules create Linux VM in Azure.
 
@@ -6,8 +6,8 @@ Terraform modules create Linux VM in Azure.
 
 ```hcl-terraform
 
-module "linux_vm" {
-  source = "git::https://github.com/mishah92/terraform-azure-modules.git//src/linux-virtual-machine"
+module "vm_linux" {
+  source = "git::https://github.com/cloudops92/terraform-azure-base-modules.git//src/virtual-machine-linux"
 
   name     = "my-vnet-peering"
   location = "eastus"
@@ -56,15 +56,16 @@ module "linux_vm" {
   auto_shutdown_time     = "2000"
   auto_shutdown_timezone = "UTC"
 
-  # Tags
-  customer       = "customer"
-  env            = "learn"
-  owner          = "customer"
-  email          = "test@customer.com"
-  repo           = "https://github.com/mishah92/terraform-azure-modules"
-  resource_group = "my-resourcegroup"
-  deployment     = "default"
-  module         = "test"
+  resource_group  = "my-resourcegroup"
+  location        = "centralindia"
+
+  # tags
+  tags = {
+    env            = "learn"
+    owner          = "customer"
+    email          = "test@example.com"
+    deployment     = "default"
+  }
 }
 
 ```

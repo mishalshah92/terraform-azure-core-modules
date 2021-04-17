@@ -55,5 +55,5 @@ resource "azurerm_postgresql_server" "postgresql_server" {
   }
 
   # Additional
-  tags = local.tags
+  tags = var.tags
 }

@@ -1,4 +1,4 @@
-# Azure Virtual Network
+# Virtual Network
 
 Terraform modules create Virtual Network in Azure.
 
@@ -7,7 +7,7 @@ Terraform modules create Virtual Network in Azure.
 ```hcl-terraform
 
 module "vnet" {
-  source = "git::https://github.com/mishah92/terraform-azure-modules.git//src/virtual-network"
+  source = "git::https://github.com/cloudops92/terraform-azure-base-modules.git//src/virtual-network"
 
   name           = "my-vnet"
   address_spaces = [
@@ -22,15 +22,16 @@ module "vnet" {
   ]
   enable_ddos = false
 
-  # Tags
-  customer       = "customer"
-  env            = "learn"
-  owner          = "customer"
-  email          = "test@customer.com"
-  repo           = "https://github.com/mishah92/terraform-azure-modules"
-  resource_group = "my-resourcegroup"
-  deployment     = "default"
-  module         = "test"
+  resource_group  = "my-resourcegroup"
+  location        = "centralindia"
+
+  # tags
+  tags = {
+    env            = "learn"
+    owner          = "customer"
+    email          = "test@example.com"
+    deployment     = "default"
+  }
 }
 
 ```

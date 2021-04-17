@@ -43,7 +43,7 @@ resource "azurerm_kubernetes_cluster" "aks_cluster" {
       os_disk_size_gb      = lookup(default_node_pool.value, "os_disk_size_gb", null)
       os_disk_type         = lookup(default_node_pool.value, "os_disk_type", null)
       type                 = lookup(default_node_pool.value, "type", "VirtualMachineScaleSets")
-      tags                 = var.default_node_pool_tags == null ? local.tags : var.default_node_pool_tags
+      tags                 = var.default_node_pool_tags == null ? var.tags : var.default_node_pool_tags
       vnet_subnet_id       = lookup(default_node_pool.value, "vnet_subnet_id", null)
 
       max_count  = lookup(default_node_pool.value, "enable_auto_scaling", false) == true ? default_node_pool.value.max_count : null
@@ -180,7 +180,7 @@ resource "azurerm_kubernetes_cluster" "aks_cluster" {
     }
   }
 
-  tags = local.tags
+  tags = var.tags
 
   lifecycle {
     ignore_changes = [

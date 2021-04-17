@@ -27,5 +27,5 @@ resource "azurerm_virtual_network_gateway" "network_gateway" {
     }
   }
 
-  tags = local.tags
+  tags = var.tags
 }

@@ -37,5 +37,5 @@ resource "azurerm_kubernetes_cluster_node_pool" "node_pool" {
   spot_max_price  = var.priority == "Spot" ? var.spot_max_price : null
 
   # Tags
-  tags = local.tags
+  tags = var.tags
 }

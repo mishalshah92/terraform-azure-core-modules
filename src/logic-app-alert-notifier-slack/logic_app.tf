@@ -4,7 +4,7 @@ resource "azurerm_logic_app_integration_account" "integration_account" {
   location            = var.location
   sku_name            = var.integration_account_sku_name
 
-  tags = local.tags
+  tags = var.tags
 }
 
 resource "azurerm_logic_app_workflow" "logic_app" {
@@ -14,7 +14,7 @@ resource "azurerm_logic_app_workflow" "logic_app" {
 
   logic_app_integration_account_id = azurerm_logic_app_integration_account.integration_account.id
 
-  tags = local.tags
+  tags = var.tags
 
   depends_on = [
     azurerm_logic_app_integration_account.integration_account

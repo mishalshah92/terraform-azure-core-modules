@@ -10,5 +10,5 @@ resource "azurerm_logic_app_workflow" "logic_app" {
 
   parameters = var.parameters
 
-  tags = local.tags
+  tags = var.tags
 }

@@ -1,4 +1,4 @@
-# Azure function-app
+# Function App
 
 Terraform modules create Azure function.
 
@@ -7,7 +7,7 @@ Terraform modules create Azure function.
 ```hcl-terraform
 
 module "function_app" {
-  source = "git::https://github.com/mishah92/terraform-azure-modules.git//src/function-app"
+  source = "git::https://github.com/cloudops92/terraform-azure-base-modules.git//src/function-app"
 
   name                = "containerRegistry1"
   location            = "centralindia"
@@ -17,15 +17,16 @@ module "function_app" {
   storage_account_name = "my-app-storage-acc"
   storage_account_access_key = "accesskey"
 
-  # Tags
-  customer       = "customer"
-  env            = "learn"
-  owner          = "customer"
-  email          = "test@customer.com"
-  repo           = "https://github.com/mishah92/terraform-azure-modules"
-  resource_group = "my-resourcegroup"
-  deployment     = "default"
-  module         = "test"
+  resource_group  = "my-resourcegroup"
+  location        = "centralindia"
+
+  # tags
+  tags = {
+    env            = "learn"
+    owner          = "customer"
+    email          = "test@example.com"
+    deployment     = "default"
+  }
 }
 
 ```

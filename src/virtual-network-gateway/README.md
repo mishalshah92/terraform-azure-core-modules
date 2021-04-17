@@ -1,4 +1,4 @@
-# Azure Virtual Network Gateway
+# Virtual Network Gateway
 
 Terraform modules create Virtual Network Gateway of VPN type in Azure.
 
@@ -7,7 +7,7 @@ Terraform modules create Virtual Network Gateway of VPN type in Azure.
 ```hcl-terraform
 
 module "vnet_gateway" {
-  source = "git::https://github.com/mishah92/terraform-azure-modules.git//src/virtual-network-gateway"
+  source = "git::https://github.com/cloudops92/terraform-azure-base-modules.git//src/virtual-network-gateway"
 
   name                = "my-route-table"
   resource_group_name = "my-resource-group"
@@ -33,15 +33,16 @@ asdasd
 EOF
   }
 
-  # Tags
-  customer       = "customer"
-  env            = "learn"
-  owner          = "customer"
-  email          = "test@customer.com"
-  repo           = "https://github.com/mishah92/terraform-azure-modules"
-  resource_group = "my-resourcegroup"
-  deployment     = "default"
-  module         = "test"
+  resource_group  = "my-resourcegroup"
+  location        = "centralindia"
+
+  # tags
+  tags = {
+    env            = "learn"
+    owner          = "customer"
+    email          = "test@example.com"
+    deployment     = "default"
+  }
 }
 
 ```

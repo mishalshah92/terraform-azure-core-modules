@@ -5,5 +5,5 @@ resource "azurerm_nat_gateway" "nat-gateway" {
   idle_timeout_in_minutes = var.idle_timeout_in_minutes
   sku_name                = var.sku
   zones                   = var.zones
-  tags                    = local.tags
+  tags                    = var.tags
 }

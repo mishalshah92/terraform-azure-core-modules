@@ -53,5 +53,5 @@ resource "azurerm_cosmosdb_account" "db" {
     ]
   }
 
-  tags = local.tags
+  tags = var.tags
 }

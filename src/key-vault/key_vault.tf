@@ -29,5 +29,5 @@ resource "azurerm_key_vault" "key_vault" {
     }
   }
 
-  tags = local.tags
+  tags = var.tags
 }

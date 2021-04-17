@@ -1,4 +1,4 @@
-# Azure Monitor AutoScaling Setting
+# Monitor AutoScaling Setting
 
 Terraform modules to deploy autoscaling setting with Azure Monitor.
 
@@ -7,7 +7,7 @@ Terraform modules to deploy autoscaling setting with Azure Monitor.
 ```hcl-terraform
 
 module "monitor_autoscale_setting" {
-  source = "git::https://github.com/mishah92/terraform-azure-modules.git//src/monitor-autoscale-setting"
+  source = "git::https://github.com/cloudops92/terraform-azure-base-modules.git//src/monitor-autoscale-setting"
 
   name               = "dynamic-demand"
   location           = "eastus"
@@ -52,15 +52,16 @@ module "monitor_autoscale_setting" {
     }
   }
 
-  # Tags
-  customer       = "customer"
-  env            = "learn"
-  owner          = "customer"
-  email          = "test@customer.com"
-  repo           = "https://github.com/mishah92/terraform-azure-modules"
-  resource_group = "my-resourcegroup"
-  deployment     = "default"
-  module         = "test"
+  resource_group  = "my-resourcegroup"
+  location        = "centralindia"
+
+  # tags
+  tags = {
+    env            = "learn"
+    owner          = "customer"
+    email          = "test@example.com"
+    deployment     = "default"
+  }
 }
 
 ```

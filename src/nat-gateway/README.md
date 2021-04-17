@@ -1,4 +1,4 @@
-# Azure Network Gateway
+# Network Gateway
 
 Terraform modules create Network Gateway in Azure.
 
@@ -7,22 +7,23 @@ Terraform modules create Network Gateway in Azure.
 ```hcl-terraform
 
 module "nat-gateway" {
-  source = "git::https://github.com/mishah92/terraform-azure-modules.git//src/nat-gateway"
+  source = "git::https://github.com/cloudops92/terraform-azure-base-modules.git//src/nat-gateway"
 
   name                 = "my-vnet-peering"
   location             = "centralindia"
   virtual_network_name = "my-vnet"
   sku                  = "Standard"
   
-  # Tags
-  customer       = "customer"
-  env            = "learn"
-  owner          = "customer"
-  email          = "test@customer.com"
-  repo           = "https://github.com/mishah92/terraform-azure-modules"
-  resource_group = "my-resourcegroup"
-  deployment     = "default"
-  module         = "test"
+  resource_group  = "my-resourcegroup"
+  location        = "centralindia"
+
+  # tags
+  tags = {
+    env            = "learn"
+    owner          = "customer"
+    email          = "test@example.com"
+    deployment     = "default"
+  }
 }
 
 ```
