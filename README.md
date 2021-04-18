@@ -32,6 +32,7 @@ A bunch of Azure modules to deploy Azure infrastructure with default values set.
 - [route-table](src/route-table)
 - [storage-account](src/storage-account)
 - [subnet](src/subnet)
+- [tags](src/tags)
 - [virtual-machine-linux](src/virtual-machine-linux)
 - [virtual-machine-scaleset-linux](src/virtual-machine-scaleset-linux)
 - [virtual-network](src/virtual-network)
