@@ -7,7 +7,7 @@ Terraform modules create Subnet in Azure.
 ```hcl-terraform
 
 module "subnet" {
-  source = "git::https://github.com/cloudops92/terraform-azure-base-modules.git//src/subnet"
+  source = "git::https://github.com/cloudops92/terraform-azure-modules.git//src/subnet"
 
   name                  = "my-route-table"
   virtual_network_name  = "my-vnet"

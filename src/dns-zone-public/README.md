@@ -7,7 +7,7 @@ Terraform modules create Public DNS zone in Azure.
 ```hcl-terraform
 
 module "pub_dns_zone" {
-  source = "git::https://github.com/cloudops92/terraform-azure-base-modules.git//src/dns-zone-public"
+  source = "git::https://github.com/cloudops92/terraform-azure-modules.git//src/dns-zone-public"
 
   name     = "azure.abc.com"
   resource_group  = "my-resourcegroup"

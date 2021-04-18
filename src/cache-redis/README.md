@@ -7,7 +7,7 @@ Terraform modules create `Azure Cache for Redis`.
 ```hcl-terraform
 
 module "cache_redis" {
-  source = "git::https://github.com/cloudops92/terraform-azure-base-modules.git//src/cache-redis"
+  source = "git::https://github.com/cloudops92/terraform-azure-modules.git//src/cache-redis"
 
   name          = "containerRegistry1"
   subnet_id     = "my-subnet-id"

@@ -7,7 +7,7 @@ Terraform modules create Linux VM in Azure.
 ```hcl-terraform
 
 module "vm_linux" {
-  source = "git::https://github.com/cloudops92/terraform-azure-base-modules.git//src/virtual-machine-linux"
+  source = "git::https://github.com/cloudops92/terraform-azure-modules.git//src/virtual-machine-linux"
 
   name     = "my-vnet-peering"
   location = "eastus"

@@ -7,7 +7,7 @@ Terraform modules create SSL cert in key-vault.
 ```hcl-terraform
 
 module "key_vault_generate" {
-  source = "git::https://github.com/cloudops92/terraform-azure-base-modules.git//src/key-vault-cert-generate"
+  source = "git::https://github.com/cloudops92/terraform-azure-modules.git//src/key-vault-cert-generate"
 
   name          = "containerRegistry1"
   location      = "centralindia"

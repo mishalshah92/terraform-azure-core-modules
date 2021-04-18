@@ -7,7 +7,7 @@ Terraform modules create Azure function.
 ```hcl-terraform
 
 module "function_app" {
-  source = "git::https://github.com/cloudops92/terraform-azure-base-modules.git//src/function-app"
+  source = "git::https://github.com/cloudops92/terraform-azure-modules.git//src/function-app"
 
   name                = "containerRegistry1"
   location            = "centralindia"

@@ -7,7 +7,7 @@ Terraform modules create managed Kubernetes Cluster in Azure.
 ```hcl-terraform
 
 module "aks_cluster" {
-  source = "git::https://github.com/cloudops92/terraform-azure-base-modules.git//src/aks"
+  source = "git::https://github.com/cloudops92/terraform-azure-modules.git//src/aks"
 
   name          = "containerRegistry1"
   subnet_id     = "my-subnet-id"

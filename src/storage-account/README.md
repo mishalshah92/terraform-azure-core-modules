@@ -7,7 +7,7 @@ Terraform modules create and manage Storage account in Azure.
 ```hcl-terraform
 
 module "storage-account" {
-  source = "git::https://github.com/cloudops92/terraform-azure-base-modules.git//src/storage-account"
+  source = "git::https://github.com/cloudops92/terraform-azure-modules.git//src/storage-account"
 
   name     = "mystorageacc"
   location = "westIndia"

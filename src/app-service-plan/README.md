@@ -7,7 +7,7 @@ Terraform modules create App Service plan in Azure.
 ```hcl-terraform
 
 module "app_service_plan" {
-  source = "git::https://github.com/cloudops92/terraform-azure-base-modules.git//src/app-service-plan"
+  source = "git::https://github.com/cloudops92/terraform-azure-modules.git//src/app-service-plan"
 
   name              = "azure.abc.com"
   location          = "centralindia"
