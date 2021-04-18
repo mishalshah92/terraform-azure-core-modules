@@ -2,6 +2,10 @@ variable "resource_group" {
   type = string
 }
 
+variable "hub_resource_group" {
+  type = string
+}
+
 variable "customer" {
   type = string
 }
