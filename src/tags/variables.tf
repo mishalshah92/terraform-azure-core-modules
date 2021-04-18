@@ -26,6 +26,10 @@ variable "module" {
   type = string
 }
 
+variable "repo" {
+  type = string
+}
+
 variable "tool" {
   description = "Automation tool info"
   default     = "Managed by Terraform"

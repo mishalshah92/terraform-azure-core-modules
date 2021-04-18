@@ -1,5 +1,3 @@
-provider "git" {}
-
 locals {
 
   default_tags = {
@@ -13,8 +11,7 @@ locals {
     ResourceGroup = var.resource_group
 
     Module = var.module
-    Branch = data.git_repository.current_repo.branch
-    Repo   = data.git_repository.current_repo.url
+    Repo   = var.repo
     Tool   = var.tool
   }
 
