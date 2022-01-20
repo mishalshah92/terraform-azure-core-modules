@@ -7,7 +7,7 @@ Terraform modules create Resource Group in Azure.
 ```hcl-terraform
 
 module "resource-group" {
-  source = "git@bitbucket.org:ownerteam/terraform-azure-modules.git//terraform/resource-group"
+  source = "git::https://github.com/cloudops92/terraform-azure-modules.git//terraform/resource-group"
   
   name      = "my-resource-group"
   location  = "Central India"
@@ -16,7 +16,7 @@ module "resource-group" {
   env        = "learn"
   owner      = "owner"
   email      = "devops@owner.ai"
-  repo       = "https://bitbucket.org/ownerteam/terraform-azure-modules"
+  repo       = "https://git::https://github.com/cloudops92/terraform-azure-modules.gitcket.org/ownerteam/terraform-azure-modules"
 }
 
 ```

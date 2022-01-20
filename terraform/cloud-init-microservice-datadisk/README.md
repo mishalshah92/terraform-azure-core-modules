@@ -7,7 +7,7 @@ Terraform modules to generate the cloud-init file for deploying container at sta
 ```hcl-terraform
 
 module "cloud-init-microservice" {
-  source = "git@bitbucket.org:ownerteam/terraform-azure-modules.git//terraform/cloud-init-microservice"
+  source = "git::https://github.com/cloudops92/terraform-azure-modules.git//terraform/cloud-init-microservice"
 
   azure_identity_login   = true
   acr_login              = true

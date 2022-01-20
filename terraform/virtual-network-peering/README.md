@@ -7,7 +7,7 @@ Terraform modules create peering between Virtual Networks in Azure.
 ```hcl-terraform
 
 module "virtual-network-peering" {
-  source = "git@bitbucket.org:ownerteam/terraform-azure-modules.git//terraform/virtual-network-peering"
+  source = "git::https://github.com/cloudops92/terraform-azure-modules.git//terraform/virtual-network-peering"
 
   name                 = "my-vnet-peering"
   resource_group_name  = "my-resource-group"

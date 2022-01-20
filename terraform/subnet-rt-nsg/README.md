@@ -7,7 +7,7 @@ Terraform modules create Subnet and its route-table and network-security-group i
 ```hcl-terraform
 
 module "subnet" {
-  source = "git@bitbucket.org:ownerteam/terraform-azure-modules.git//terraform/subnet-rt-nsg"
+  source = "git::https://github.com/cloudops92/terraform-azure-modules.git//terraform/subnet-rt-nsg"
 
   name                  = "my-route-table"
   location              = "centralindia"
