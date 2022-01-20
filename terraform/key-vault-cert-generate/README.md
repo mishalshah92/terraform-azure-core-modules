@@ -34,10 +34,10 @@ module "key_vault_generate" {
     "keyEncipherment",
   ]
 
-  subject = "CN=dynamicdemand.ai"
+  subject = "CN=test.com"
   validity_in_months = 12
   subject_alternative_dns_names = [
-    "owner.dynamicdemabnd.ai"
+    "owner.test.com"
   ]
   
 
