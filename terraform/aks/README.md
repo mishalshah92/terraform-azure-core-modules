@@ -1,0 +1,40 @@
+# Azure Kubernetes Service
+
+Terraform modules create managed Kubernetes Cluster in Azure.
+
+## Development
+
+```hcl-terraform
+
+module "aks_cluster" {
+  source = "git@bitbucket.org:ownerteam/terraform-azure-modules.git//terraform/aks"
+
+  name          = "containerRegistry1"
+  location      = "centralindia"
+  subnet_id     = "my-subnet-id"
+
+  default_node_pool = {
+    name       = "default"
+    node_count = 1
+    vm_size    = "Standard_D2_v2"
+  }
+
+  identity = {
+    type = "SystemAssigned"
+  }
+  
+  # Tags
+  customer       = "owner"
+  env            = "learn"
+  owner          = "owner"
+  email          = "test@owner.ai"
+  repo           = "https://github.com/cloudops92/terraform-azure-modules"
+  resource_group = "my-resourcegroup"
+  deployment     = "default"
+  module         = "test"
+}
+
+```
+ 
+- **Variables**: For info on variables, check [file](variables.tf)
+- **Outputs**: For info on outputs, check [file](outputs.tf)

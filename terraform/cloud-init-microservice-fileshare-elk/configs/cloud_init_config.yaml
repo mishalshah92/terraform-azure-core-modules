@@ -1,0 +1,13 @@
+#cloud-config
+write_files:
+  - path: ${docker_compose_file_path}
+    content: ${docker_compose_file_base64_content}
+    encoding: b64
+    permissions: '0644'
+  - path: /etc/default/telegraf
+    content: ${telegraf_env_base64_content}
+    encoding: b64
+    permissions: '0644'
+runcmd:
+  - [ usermod, -aG, docker, telegraf ]
+  - [ systemctl, ${telegraf_run}, --no-block, telegraf.service ]
