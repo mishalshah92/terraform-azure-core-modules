@@ -1,0 +1,56 @@
+# Azure Database Server - MySQL
+
+Terraform modules create Azure database for MySQL.
+
+## Development
+
+```hcl-terraform
+
+module "mysql-db" {
+  source = "git@bitbucket.org:ownerteam/terraform-azure-modules.git//terraform/database-server-mysql"
+
+  name     = "my-mysql-db"
+  location = "centralindia"
+  
+  # Config
+  create_mode                   = "Default"
+  sku_name                      = "GP_Gen5_8"
+  db_version                    = "8.0"
+  public_network_access_enabled = false
+
+  # Auth
+  administrator_username = "mysql"
+  administrator_password = "admin@123"
+  
+  # Storage
+  auto_grow_enabled = true
+  storage_mb        = "10240" ## 10 GB
+
+  # Encryption & SSL
+  ssl_enforcement_enabled          = true
+  ssl_minimal_tls_version_enforced = "TLS1_2"
+
+  # Backup
+  backup_retention_days        = 10
+  geo_redundant_backup_enabled = false
+
+  # Threat Detection
+  threat_detection_policy = {
+    enabled = false
+  }
+  
+  # Tags
+  customer       = "owner"
+  env            = "learn"
+  owner          = "owner"
+  email          = "test@owner.ai"
+  repo           = "https://github.com/cloudops92/terraform-azure-modules"
+  resource_group = "my-resourcegroup"
+  deployment     = "default"
+  module         = "test"
+}
+
+```
+ 
+- **Variables**: For info on variables, check [file](variables.tf)
+- **Outputs**: For info on outputs, check [file](outputs.tf)
