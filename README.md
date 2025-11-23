@@ -1,8 +1,33 @@
 # Terraform Azure Modules
 
-A bunch of Azure modules to deploy Azure infrastructure with default values set.
+A library of foundational, reusable Terraform modules for Azure infrastructure with sensible defaults.
+
+## Overview
+
+`terraform-azure-core-modules` provides a comprehensive suite of vanilla, production-ready Terraform modules designed 
+to deploy key Azure resources. These modules are built to be easy to adopt, composable, and standardized—serving as the 
+core building blocks for your Azure architecture.
+
+Use this repository when you want consistent infrastructure patterns across your Azure environments, while retaining 
+flexibility via module inputs and overrides.
+
+## Key Features
+
+- Modular, reusable Terraform modules covering a wide range of Azure services.
+- Sensible defaults out of the box—get started with minimal configuration.
+- Designed for Terraform version ≥ `0.15`.
+- Clear separation of concerns: each module manages a specific service (e.g., VM, VNet, Storage, AKS).
+- Enterprise-ready: Standard tagging, naming convention, resource groups, etc.
+- Upstream modules you can consume into higher-level “construct” or “solution” repos.
 
 - **Terraform version** >= `0.15`
+
+## Best Practices
+- Use this repo as the core module library. For your actual environments/projects, create separate repos that consume 
+these modules (with minimal changes to module code).
+- Use versioned tags/releases of this library to ensure stability and controlled upgrades.
+- Encourage teams to follow standardized variable names and outputs across modules for consistency.
+- Run module-level testing (e.g., via terraform validate, terraform fmt, tflint) before releasing new versions.
 
 ## Modules
 
@@ -51,13 +76,12 @@ A bunch of Azure modules to deploy Azure infrastructure with default values set.
 - [virtual-network-peering](terraform/virtual-network-peering)
   
 ## Development
+To manage the Terraform version, [tfenv](https://github.com/tfutils/tfenv) is being used.  
 
-- To manage the Terraform version, [tfenv](https://github.com/tfutils/tfenv) is being used.  
+## Licencing & Maintainer
 
-## Maintainer
-
-Maintained by Mishal Shah
-📧 mishalshah92@gmail.com
+License: GPL-3.0.\
+Maintainer: Mishal Shah – 📧 mishalshah92@gmail.com
 
 ## Releases
 
