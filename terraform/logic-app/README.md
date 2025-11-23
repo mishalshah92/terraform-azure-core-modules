@@ -7,7 +7,7 @@ Terraform modules create Logic App.
 ```hcl-terraform
 
 module "logic_app" {
-  source = "git::https://github.com/mishalshah92/terraform-azure-modules.git//terraform/logic_app"
+  source = "git::https://github.com/mishalshah92/terraform-azure-core-modules.git//terraform/logic_app"
 
   name     = "my-vnet-peering"
   location = "eastus"

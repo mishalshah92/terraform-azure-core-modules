@@ -7,7 +7,7 @@ Terraform modules to generate the cloud-init file for deploying Jenkins Master o
 ```hcl-terraform
 
 module "cloud-init-microservice-fileshare-jenkins-master" {
-  source = "git::https://github.com/mishalshah92/terraform-azure-modules.git//terraform/cloud-init-microservice-fileshare-jenkins-master"
+  source = "git::https://github.com/mishalshah92/terraform-azure-core-modules.git//terraform/cloud-init-microservice-fileshare-jenkins-master"
 
   azure_identity_login   = true
   acr_login              = true

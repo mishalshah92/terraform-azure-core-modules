@@ -7,7 +7,7 @@ Terraform modules create Network Security Group in Azure.
 ```hcl-terraform
 
 module "network-security-group" {
-  source = "git::https://github.com/mishalshah92/terraform-azure-modules.git//terraform/network-security-group"
+  source = "git::https://github.com/mishalshah92/terraform-azure-core-modules.git//terraform/network-security-group"
 
   name                = "my-network-sg"
   security_rules      = [

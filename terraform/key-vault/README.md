@@ -7,7 +7,7 @@ Terraform modules create key-vault in Azure.
 ```hcl-terraform
 
 module "key_vault" {
-  source = "git::https://github.com/mishalshah92/terraform-azure-modules.git//terraform/key-vault"
+  source = "git::https://github.com/mishalshah92/terraform-azure-core-modules.git//terraform/key-vault"
 
   name          = "containerRegistry1"
   location      = "centralindia"
