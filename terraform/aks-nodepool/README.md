@@ -7,7 +7,7 @@ Terraform module to create node pool for Kubernetes Cluster in Azure with AKS se
 ```hcl-terraform
 
 module "aks_nodepool" {
-  source = "git::https://github.com/cloudops92/terraform-azure-modules.git//terraform/aks-nodepool"
+  source = "git::https://github.com/mishalshah92/terraform-azure-modules.git//terraform/aks-nodepool"
 
   name                  = "containerRegistry1"
   kubernetes_cluster_id = "cluster/id"
@@ -18,7 +18,7 @@ module "aks_nodepool" {
   env            = "learn"
   owner          = "owner"
   email          = "test@owner.ai"
-  repo           = "https://github.com/cloudops92/terraform-azure-modules"
+  repo           = "https://github.com/mishalshah92/terraform-azure-modules"
   resource_group = "my-resourcegroup"
   deployment     = "default"
   module         = "test"

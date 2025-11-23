@@ -7,7 +7,7 @@ Terraform modules to generate the cloud-init file for deploying micro-service on
 ```hcl-terraform
 
 module "cloud-init-microservice-fileshare" {
-  source = "git::https://github.com/cloudops92/terraform-azure-modules.git//terraform/cloud-init-microservice-fileshare"
+  source = "git::https://github.com/mishalshah92/terraform-azure-modules.git//terraform/cloud-init-microservice-fileshare"
 
   azure_identity_login   = true
   acr_login              = true

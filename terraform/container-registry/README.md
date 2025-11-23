@@ -7,7 +7,7 @@ Terraform modules create Public DNS zone in Azure.
 ```hcl-terraform
 
 module "container_registry" {
-  source = "git::https://github.com/cloudops92/terraform-azure-modules.git//terraform/container-registry"
+  source = "git::https://github.com/mishalshah92/terraform-azure-modules.git//terraform/container-registry"
 
   name          = "containerRegistry1"
   sku           = "Standard"
@@ -18,7 +18,7 @@ module "container_registry" {
   env            = "learn"
   owner          = "owner"
   email          = "test@owner.ai"
-  repo           = "https://github.com/cloudops92/terraform-azure-modules"
+  repo           = "https://github.com/mishalshah92/terraform-azure-modules"
   resource_group = "my-resourcegroup"
   deployment     = "default"
   module         = "test"

@@ -7,7 +7,7 @@ Terraform modules create Route Table in Azure.
 ```hcl-terraform
 
 module "route-table" {
-  source = "git::https://github.com/cloudops92/terraform-azure-modules.git//terraform/route-table"
+  source = "git::https://github.com/mishalshah92/terraform-azure-modules.git//terraform/route-table"
 
   name                = "my-route-table"
   
@@ -24,7 +24,7 @@ module "route-table" {
   env            = "learn"
   owner          = "owner"
   email          = "test@owner.ai"
-  repo           = "https://github.com/cloudops92/terraform-azure-modules"
+  repo           = "https://github.com/mishalshah92/terraform-azure-modules"
   resource_group = "my-resourcegroup"
   deployment     = "default"
   module         = "test"

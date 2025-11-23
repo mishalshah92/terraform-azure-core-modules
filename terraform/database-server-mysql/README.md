@@ -7,7 +7,7 @@ Terraform modules create Azure database for MySQL.
 ```hcl-terraform
 
 module "mysql-db" {
-  source = "git::https://github.com/cloudops92/terraform-azure-modules.git//terraform/database-server-mysql"
+  source = "git::https://github.com/mishalshah92/terraform-azure-modules.git//terraform/database-server-mysql"
 
   name     = "my-mysql-db"
   location = "centralindia"
@@ -44,7 +44,7 @@ module "mysql-db" {
   env            = "learn"
   owner          = "owner"
   email          = "test@owner.ai"
-  repo           = "https://github.com/cloudops92/terraform-azure-modules"
+  repo           = "https://github.com/mishalshah92/terraform-azure-modules"
   resource_group = "my-resourcegroup"
   deployment     = "default"
   module         = "test"

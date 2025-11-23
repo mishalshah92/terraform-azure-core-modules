@@ -7,7 +7,7 @@ Terraform modules create Application Insight in Azure.
 ```hcl-terraform
 
 module "application_insights" {
-  source = "git::https://github.com/cloudops92/terraform-azure-modules.git//terraform/application-insights"
+  source = "git::https://github.com/mishalshah92/terraform-azure-modules.git//terraform/application-insights"
 
   name              = "azure.abc.com"
   location          = "centralindia"
@@ -18,7 +18,7 @@ module "application_insights" {
   env            = "learn"
   owner          = "owner"
   email          = "test@owner.ai"
-  repo           = "https://github.com/cloudops92/terraform-azure-modules"
+  repo           = "https://github.com/mishalshah92/terraform-azure-modules"
   resource_group = "my-resourcegroup"
   deployment     = "default"
   module         = "test"

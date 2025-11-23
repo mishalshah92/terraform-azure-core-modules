@@ -7,7 +7,7 @@ Terraform modules to create Application Gateway in Azure.
 ```hcl-terraform
 
 module "application_gateway" {
-  source = "git::https://github.com/cloudops92/terraform-azure-modules.git//terraform/application-gateway"
+  source = "git::https://github.com/mishalshah92/terraform-azure-modules.git//terraform/application-gateway"
 
   name          = "containerRegistry1"
   location      = "centralindia"
@@ -18,7 +18,7 @@ module "application_gateway" {
   env            = "learn"
   owner          = "owner"
   email          = "test@owner.ai"
-  repo           = "https://github.com/cloudops92/terraform-azure-modules"
+  repo           = "https://github.com/mishalshah92/terraform-azure-modules"
   resource_group = "my-resourcegroup"
   deployment     = "default"
   module         = "test"

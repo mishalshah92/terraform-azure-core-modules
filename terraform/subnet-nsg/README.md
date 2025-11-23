@@ -7,7 +7,7 @@ Terraform modules create Subnet and its network-security-group in Azure and perf
 ```hcl-terraform
 
 module "subnet" {
-  source = "git::https://github.com/cloudops92/terraform-azure-modules.git//terraform/subnet-rt-nsg"
+  source = "git::https://github.com/mishalshah92/terraform-azure-modules.git//terraform/subnet-rt-nsg"
 
   name                  = "my-route-table"
   location              = "centralindia"
@@ -20,7 +20,7 @@ module "subnet" {
   env            = "learn"
   owner          = "owner"
   email          = "test@owner.ai"
-  repo           = "https://github.com/cloudops92/terraform-azure-modules"
+  repo           = "https://github.com/mishalshah92/terraform-azure-modules"
   resource_group = "my-resourcegroup"
   deployment     = "default"
   module         = "test"

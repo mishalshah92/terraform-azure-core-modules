@@ -7,7 +7,7 @@ Terraform modules create network flow log configurations in Azure for NSG.
 ```hcl-terraform
 
 module "nsg-flow-logs" {
-  source = "git::https://github.com/cloudops92/terraform-azure-modules.git//terraform/network-watcher-flow-log"
+  source = "git::https://github.com/mishalshah92/terraform-azure-modules.git//terraform/network-watcher-flow-log"
 
   network_watcher_name  = "vnet-net-watcher"
   resource_group        = "my-resource-group"

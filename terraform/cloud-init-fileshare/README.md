@@ -7,7 +7,7 @@ Terraform modules to generate the cloud-init file for mounting FileShare on VM.
 ```hcl-terraform
 
 module "cloud-init-fileshare" {
-  source = "git::https://github.com/cloudops92/terraform-azure-modules.git//terraform/cloud-init-fileshare"
+  source = "git::https://github.com/mishalshah92/terraform-azure-modules.git//terraform/cloud-init-fileshare"
 
   azure_identity_login   = true
 

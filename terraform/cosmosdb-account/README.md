@@ -7,7 +7,7 @@ Terraform modules create CosmosDB account in Azure.
 ```hcl-terraform
 
 module "cosmosdb_account" {
-  source = "git::https://github.com/cloudops92/terraform-azure-modules.git//terraform/cosmosdb-account"
+  source = "git::https://github.com/mishalshah92/terraform-azure-modules.git//terraform/cosmosdb-account"
 
   name       = "containerRegistry1"
   location   = "centralindia"
@@ -27,7 +27,7 @@ module "cosmosdb_account" {
   env            = "learn"
   owner          = "owner"
   email          = "test@owner.ai"
-  repo           = "https://github.com/cloudops92/terraform-azure-modules"
+  repo           = "https://github.com/mishalshah92/terraform-azure-modules"
   resource_group = "my-resourcegroup"
   deployment     = "default"
   module         = "test"

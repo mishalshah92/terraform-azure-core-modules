@@ -7,7 +7,7 @@ Terraform modules create Network Security Group Rules in Azure.
 ```hcl-terraform
 
 module "vnet_nsg_rules" {
-  source = "git::https://github.com/cloudops92/terraform-azure-modules.git//terraform/network-security-group-rules"
+  source = "git::https://github.com/mishalshah92/terraform-azure-modules.git//terraform/network-security-group-rules"
 
   location                    = "centralindia"
   network_security_group_name = "mytestnsg"
@@ -31,7 +31,7 @@ module "vnet_nsg_rules" {
   env            = "learn"
   owner          = "owner"
   email          = "test@owner.ai"
-  repo           = "https://github.com/cloudops92/terraform-azure-modules"
+  repo           = "https://github.com/mishalshah92/terraform-azure-modules"
   resource_group = "my-resourcegroup"
   deployment     = "default"
   module         = "test"

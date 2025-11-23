@@ -7,7 +7,7 @@ Terraform modules create Virtual Network in Azure.
 ```hcl-terraform
 
 module "vnet" {
-  source = "git::https://github.com/cloudops92/terraform-azure-modules.git//terraform/virtual-network"
+  source = "git::https://github.com/mishalshah92/terraform-azure-modules.git//terraform/virtual-network"
 
   name           = "my-vnet"
   address_spaces = [
@@ -27,7 +27,7 @@ module "vnet" {
   env            = "learn"
   owner          = "owner"
   email          = "test@owner.ai"
-  repo           = "https://github.com/cloudops92/terraform-azure-modules"
+  repo           = "https://github.com/mishalshah92/terraform-azure-modules"
   resource_group = "my-resourcegroup"
   deployment     = "default"
   module         = "test"

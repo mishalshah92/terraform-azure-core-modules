@@ -81,7 +81,7 @@ To manage the Terraform version, [tfenv](https://github.com/tfutils/tfenv) is be
 ## Licencing & Maintainer
 
 License: GPL-3.0.\
-Maintainer: Mishal Shah – 📧 mishalshah92@gmail.com
+Maintainer: Mishal Shah –- _mishalshah92@gmail.com_
 
 ## Releases
 
