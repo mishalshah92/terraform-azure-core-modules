@@ -1,4 +1,4 @@
-# Terraform Azure Modules
+# Terraform Azure Core Modules
 
 A library of foundational, reusable Terraform modules for Azure infrastructure with sensible defaults.
 
